@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (usually 'main' or 'master')
+
+media_folder: "images" # Folder where images are stored
+public_folder: "images" # Folder for accessing images
+
+collections:
+  - name: "posts" # Collection name (can be anything)
+    label: "Posts" # Display name
+    folder: "posts" # Folder where posts are stored
+    create: true # Allow creating new posts
+    fields: # Fields for each post
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
